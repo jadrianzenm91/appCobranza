@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{fragments/main_layout}">
+    <body>
+        <style>
+            .form-group{
+                margin-bottom: 0px !important;
+            }
+        </style>
+
+        <div layout:fragment="content" class="container-fluid">
+
+            <div class="row">
+                <div class="col-md-12 text-center text-uppercase h4">BANDEJA DE FACTURAS </div>
+            </div>
+            <hr>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" checked id="inlineCheckbox1" value="option1">
+                <label class="form-check-label" for="inlineCheckbox1">Liquidado</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" checked id="inlineCheckbox2" value="option2">
+                <label class="form-check-label" for="inlineCheckbox2">Pendiente</label>
+            </div>
+            <hr>
+            <!-- Bandeja Principal -->
+
+            <div class="mb-3">
+                <div>
+                    <div class="table-responsive" style="font-size: 12px;">
+                        <table id="tblFactura" class="table-bordered table-hover" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Cuenta</th>
+                                    <th>Razon Social</th>
+                                    <th>Fecha Creación</th>
+                                    <th>Nro Factura</th>
+                                    <th>Fecha de Venc.</th>
+                                    <th>Total</th>
+                                    <th>Saldo</th>
+                                    <th>Demora</th>
+                                    <th>Estado</th>
+                                    <th>Cobrador</th>
+                                    <th>Codigo</th>
+                                    <th>Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FIN Container -->
+        </div>
+         <div layout:fragment="scripts">
+            <script type="text/javascript" th:src="@{/js/nsScript/factura/index.js}"></script>
+            <script type="text/javascript" th:src="@{/js/nsScript/factura/controller.js}"></script>
+        </div>
+    </body>
+</html>

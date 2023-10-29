@@ -1,0 +1,184 @@
+<html xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{fragments/main_layout}">
+    <body>
+
+
+            <!-- Begin Page Content -->
+            <div layout:fragment="content" class="container-fluid">
+
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                </div>
+
+              <!-- Content Row -->
+               <div class="form-group">
+                   <label>Semana:</label> <i class="fas fa-sync-alt" id="btnRefresh"></i>
+                   <select id="cboSemana" class="custom-select mr-sm-2"></select>
+                  
+                </div>
+
+              <div class="row mt-2">
+
+                <div class="col-md-3 mb-4">
+                  <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                      <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Deuda Vencida</div>
+                          <div class="row no-gutters align-items-center">
+                            <div class="col-auto">
+                              <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><label class="number" name="lblDeudaVencida">0</label></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <i class="fas fa-money-bill-alt fa-2x text-gray-300"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                  <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                      <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Semana Vencida</div>
+                          <div class="row no-gutters align-items-center">
+                            <div class="col-auto">
+                              <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><label class="number" name="lblSemanaVencida">0</label></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <i class="fas fa-money-bill-alt fa-2x text-gray-300"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                  <div class="card border-left-success shadow h-100 py-2">
+                    <div class="card-body">
+                      <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Representación de Deuda</div>
+                          <div class="row no-gutters align-items-center">
+                            <div class="col-auto">
+                              <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><label class="number" name="lblPorcDeuda">0</label></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <i class="fas fa-percent fa-2x text-gray-300"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                  <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                      <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Gestión de Cobro</div>
+                          <div class="row no-gutters align-items-center">
+                            <div class="col-auto">
+                              <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><label class="number" name="lblPagoSemana">0</label></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <i class="fas fa-money-bill-alt fa-2x text-gray-300"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                  <div class="card border-left-success shadow h-100 py-2">
+                    <div class="card-body">
+                      <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Disminución de Deuda</div>
+                          <div class="row no-gutters align-items-center">
+                            <div class="col-auto">
+                              <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><label class="number" name="lblPorcReducDeuda">0</label></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <i class="fas fa-percent fa-2x text-gray-300"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+
+
+              <div class="row">
+                <div class="col-xl-12 col-lg-7">
+                  <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 class="m-0 font-weight-bold text-primary">Detalle de la Deuda</h6>
+
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                      <div class="col-md-4">
+                          <div class="table-responsive">
+                            <table id="tblDeudaSemana" class="table-bordered" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th colspan="5" class="bg-dark text-white text-center">
+                                            Variación de deuda (%)
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th class="bg-dark text-white text-center">Fecha</th>
+                                        <th class="bg-dark text-white text-center">DeudaTotal</th>
+                                        <th class="bg-dark text-white text-center">DeudaSaldo</th>
+                                        <th class="bg-dark text-white text-center">GestionCobro</th>
+                                        <th class="bg-dark text-white text-center">Variacion%</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td class="bg-dark text-white text-center">Total General</td>
+                                        <td class="bg-dark text-white text-right"><label class="number" name="lblDeudaTotal">0</label></td>
+                                        <td class="bg-dark text-white text-right"><label class="number" name="lblDeudaSaldo">0</label></td>
+                                        <td class="bg-dark text-white text-right"><label class="number" name="lblPagoTotal">0</label></td>
+                                        <td class="bg-dark text-white text-right"><label class="number" name="lblVariacion">0</label></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+              
+              
+            </div>
+            <!-- /.container-fluid -->
+
+            <div layout:fragment="scripts">
+                <script type="text/javascript" th:src="@{js/nsScript/dashboard/index.js}"></script>
+                <script type="text/javascript" th:src="@{js/nsScript/dashboard/controller.js}"></script>
+            </div>
+
+    </body>
+</html>
+  
+
+
+  

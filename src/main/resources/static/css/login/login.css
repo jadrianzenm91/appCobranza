@@ -1,0 +1,8 @@
+.login-content{
+    background-color: white !important;
+}
+@media(max-width: 767px){
+    #carousel-generic{
+        display:hiden;
+    }
+}

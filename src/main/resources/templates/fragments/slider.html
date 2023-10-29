@@ -1,0 +1,47 @@
+<div th:fragment="slider" xmlns:th="http://www.w3.org/1999/xhtml">
+    
+    <ul name="slider" class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled"style="height: 100vh;">
+        <div class="sidebar-brand d-flex align-items-center justify-content-center">
+            <img src="/images/escudo.png" width="50px"></div>
+        <hr class="sidebar-divider my-0">
+        <div class="sidebar-heading">    CONTROL Y SEGUIMIENTO</div>
+        <li class="nav-item">
+            <a class="nav-link" href="/dashboard">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Dashboard Semanal</span>
+            </a>
+        </li>
+        
+        <hr class="sidebar-divider my-0"> 
+        <div class="sidebar-heading">    GESTION DE COBRANZA</div>
+        <li class="nav-item">
+            <a class="nav-link" href="/cliente">
+                <i class="fas fa-user"></i><span>Cliente</span>
+            </a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link" href="/cobrador">
+                <i class="fas fa-user"></i><span>Cobrador</span>
+            </a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link" href="/factura">
+                <i class="fas fa-user"></i><span>Facturas</span>
+            </a>
+        </li>
+        
+        <div class="sidebar-heading">    GESTION DE RIESGOS</div>
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                <i class="fas fa-fw fa-tachometer-alt"></i><span>Nivel de Riesgos</span>
+            </a>
+        </li>
+        <hr class="sidebar-divider my-0"> 
+        <hr class="sidebar-divider d-none d-md-block">
+        <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+    </ul>
+</div>

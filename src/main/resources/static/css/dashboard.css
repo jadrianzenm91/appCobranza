@@ -1,0 +1,374 @@
+.table-responsive{
+    font-size: 13px;
+  }
+.form-group{
+  margin-bottom: 0px !important;
+}
+p {
+  margin-bottom: 0 !important;
+}
+.form-control{
+  font-size: inherit;
+  color: inherit !important;
+  border-color: lightblue;
+}
+body{
+    color: black !important;
+}
+.table{
+    color: inherit !important;
+}
+.btn-link{
+    color: darkblue !important;
+    font-weight: bold;
+}
+
+td a {
+    color: blue !important;
+}
+.badge-primary{
+    background: darkblue !important;
+}
+.modal-header{
+  color: white;
+}
+.progress-bar{
+    background: darkorange !important;
+} 
+.sidebar.toggled .nav-item .nav-link,
+.sidebar-dark .nav-item .nav-link i{
+    color: white;
+}
+/*html{
+    height: 100%;
+}
+body {
+  font-size: 12px;
+}
+.title {
+  font-size: inherit;
+}
+.separator-left{
+  padding-left: 5px !important;
+}
+
+.logo{
+  height: inherit;
+}
+
+.navbar-brand{
+  padding: unset;
+}
+.navbar-default{
+  background-color:#0A3973;
+}
+.navbar-default .navbar-nav > li > a{
+  color: #FFF;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:active{
+  color: #FFF;
+}
+
+.form-control{
+  font-size: inherit;
+  color: blue !important;
+  border-color: lightblue;
+}
+.form-control[disabled]
+{
+  cursor: not-allowed;
+  border: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  background: none;
+}
+
+
+.btn,
+.btn:hover,
+.btn:focus {
+  text-transform: uppercase;
+  font-size: inherit;
+}
+
+.btn-success {
+  background-color: green;
+  border-color: green;
+}
+.panel-title{
+  font-size: inherit;
+  font-weight: bold;
+}
+
+.glyphicon{
+  cursor: pointer;
+  font-size: inherit;
+  padding-left: initial;
+}
+.navbar-nav .glyphicon{
+  font-size: initial;
+  padding-left: 13px;
+}
+.table{
+    font-size: inherit;
+}
+.table-lg{
+  min-width: 1600px !important;
+}
+.table{
+  min-width: 950px !important;
+  width: 100% !important;
+  margin-bottom: 10px;
+}
+.modal-content .table{
+ min-width: unset; 
+}
+@media (max-width: 1200px) {
+.table-large{
+    min-width: 1600px !important;
+  }
+}
+@media (min-width: 992px) {
+   .modal-lg{
+    width: 95% !important;    
+   }
+  .modal-lg-grafico {
+    width: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn{
+    margin-top: 3px;
+  }
+  .table-responsive > .table > thead > tr > th{
+    white-space: inherit;
+  }
+}
+/*
+@media (max-width: 360px) {
+  body {
+    font-size: 9px;
+  }
+  h4{
+   font-size: 10px; 
+  }
+  h6{
+   font-size: 10px; 
+  }
+  .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{
+    padding-right: inherit;
+  }
+  .form-control{
+    padding: 2px 5px
+  }
+  .pull-right{
+    float: unset !important;
+  }
+}
+
+.panel{
+    margin-bottom: 5px !important;
+}
+.panel-default > .panel-heading{
+
+  padding: 4px 10px !important;
+}
+
+.panel-body{
+  padding-bottom: 0px;
+  padding: 9px;
+}
+
+.panel-body .btn {
+  font-size: inherit;
+}
+
+table > thead > tr > th  {
+   text-align: center;
+   vertical-align: middle !important;
+}
+
+.link{
+  cursor: pointer;
+}
+
+.modal-header{
+  background: linear-gradient(to right, #003353, #5C98E1) !important;
+  color: white;
+}
+
+.sub-titulo{
+    background: black !important;
+    color: white;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.uppercase{
+  text-transform: uppercase;
+}
+.label-read{
+  font-weight: normal !important;
+  text-transform: uppercase;
+}
+.label{
+  font-size: 95%;
+}
+.text-center{
+  text-align: center;
+}
+
+
+.dropdown-menu{
+ font-size: inherit; 
+}
+.table-md > tbody > tr > td , .table-md > tbody > tr > td{
+  text-align: center;
+  padding: 5px !important; 
+}
+.table-md > thead > tr > th{
+ padding: 3px !important; 
+ 
+}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td
+{
+  padding: 1px;
+
+}
+.table .form-control{
+  border-radius: inherit;
+  min-width: 95px;
+}
+.table label{
+  min-width: inherit;
+  font-weight: inherit;
+}
+.table label.number{
+  min-width: 82px;
+  text-align: center;
+  font-weight: inherit;
+}
+.table th{
+ text-align: center;
+ vertical-align: middle;
+ background-color: black;
+ color: white;
+ font-size: 11px;
+ text-transform: uppercase;
+}
+
+.table  td.accion{
+  color: red;
+  
+ 
+}
+
+
+
+
+hr {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;;
+}
+
+.input-group-addon{
+  border: 1px solid lightblue;
+}
+
+.pagination > li > a
+{
+    z-index: 0 !important;
+    color: #003353;
+    border: 1px solid #003353;
+}
+.pagination > .active > a{
+    background-color: #003353 !important;
+    border: 1px solid #003353 !important;
+}
+
+.myAlert-bottom{
+    position: fixed;
+    bottom: 5px;
+    left:2%;
+    width: 75%;
+    z-index:9999;
+    font-size: 14px;
+    color: white !important;
+}
+.alert{
+    display: none;
+}
+.alert-warning{
+    background-color: darkorange !important;    
+}
+.alert-danger {
+  background-color: orangered !important;
+}
+.alert-success {
+  background-color: green !important;
+}
+.modal-footer-fixed{
+    width: 41%;
+    z-index:1;
+    text-align: center;
+    position: fixed;
+    bottom: 5px;
+    left: 59%;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.has-error > label{
+    color: darkred;
+}
+input, textarea, select{
+    text-transform: uppercase;
+}
+.h-100{
+    height:100px !important;
+}
+.h-150{
+    height:150px !important;
+}
+
+.label-info{
+    background-color: blue;
+}
+
+*/
+.modal-lg{
+max-width: 95% !important;    
+}
+.modal-md{
+max-width: 75% !important;    
+}
+.table-md{
+ min-width: 1024px;
+ 
+}
+
+th.accion{
+  text-align: center;
+  min-width: 120px;
+  padding: 6px;
+  margin: 2px;
+  vertical-align: middle;
+}
+
+table th{
+    text-align: left;
+    vertical-align: middle !important;
+    background-color: lightgrey;
+}
+.card-header{
+    padding: 7px !important;
+}
+td.accion .fas{
+  padding: 2px !important;
+  font-size: 16px;
+  cursor: pointer;
+}
+td.accion{
+  width: 100px;
+ text-align: center;
+}

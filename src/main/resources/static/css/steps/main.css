@@ -1,0 +1,110 @@
+
+ul.progress-steps {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    list-style: none;
+}
+
+li.section {
+    display: inline-block;
+    padding-top: 32px;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 16px;
+    vertical-align: top;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;   
+}
+li.section > span {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: gray;
+}
+/* rechazado/Observado */
+ul.progress-steps li.danger:before {
+    color: white;
+    background-color: red;
+}
+ul.progress-steps a li.danger, li.danger, li.danger span{ 
+    color: red;
+}
+
+/* pendiente de aprobar */
+ul.progress-steps li.warning:before {
+    color: white;
+    background-color: orange;
+}
+ul.progress-steps a li.warning, li.warning,  li.warning span{ 
+    color: orange;
+}
+
+/* Aprobado */
+ul.progress-steps li.success:before {
+    color: white;
+    background-color: green;
+}
+ul.progress-steps a li.success, li.success,  li.success span{ 
+    color: green;
+}
+
+/* En elaboracion */
+ul.progress-steps li.active:before  {
+    color: white;
+    background-color: blue;
+}
+ul.progress-steps a li.active, li.active, li.active span{
+    color: blue;
+}
+
+/* Inactivo */
+.inactive{
+    cursor: not-allowed;
+    color: gray;
+}
+
+
+li.section:before {
+    
+    position: absolute;
+    top: 2px;
+    left: calc(50% - 15px);
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    color: white;
+    border-radius: 17px;
+    line-height: 30px;
+    background: gray;
+}
+
+.status-steps {
+    height: 2px;
+    background: black;
+    position: relative;
+    top: 20px;
+    margin: 0 auto;
+}
+.current-status {
+    height: 2px;
+    width: 0;
+    border-radius: 1px;
+    background: mediumseagreen;
+}
+
+@keyframes changeBackground {
+    from {background: gray}
+    to {background: mediumseagreen}
+}
+
+li.section.visited:before {
+    content: '\2714';
+    animation: changeBackground .5s linear;
+    animation-fill-mode: forwards;
+}
+
+li.section.visited.current:before {
+    box-shadow: 0 0 0 2px mediumseagreen;
+}

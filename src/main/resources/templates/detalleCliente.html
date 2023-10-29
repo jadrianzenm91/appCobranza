@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{fragments/main_layout}">
+    <body>
+
+        <div layout:fragment="content" class="container-fluid">
+
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-md-12 text-center text-uppercase h4"><a href="/cliente">BANDEJA DE CLIENTES </a> <i class="fas fa-chevron-left"></i> <label>DETALLE</label></div>
+                </div>
+                <div class="border-bottom-primary mb-1">
+                    <p>Cuenta: <label name="lblCuenta"></label></p>
+                    <p>RUC: <label name="lblRUC"></label></p>
+                    <p>Razon Social: <label name="lblRazonsocial"></label></p>
+                    <p>Cliente: <label name="lblRepresentante"></label></p>
+                    <p>Departamento: <label name="lblDpto"></label></p>
+                    <p>Provincia: <label name="lblProv"></label></p>
+                    <p>Distrito: <label name="lblDist"></label></p>
+                    <p>Dirección: <label name="lblDireccion"></label></p>
+                </div>
+
+                <!-- Bandeja Principal -->
+                <div class="form-row">
+                    <div class="col-sm-12">
+                        <div class="float-right">
+                            <button id="btnNuevo" class="btn btn-primary" data-toggle="modal" data-target="#mdlNuevo"><span class="fas fa-plus"></span> Factura</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- DATOS COBRADOS -->
+                <div class="mb-2 border-bottom-primary">
+                    <div>
+                        <div class="table-responsive">
+                            <table id="tblCobrador" class="table-bordered" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th colspan="5">DATOS DEL COBRADOR</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Código</th>
+                                        <th>Nombres Completos</th>
+                                        <th>DNI</th>
+                                        <th>Fecha Asignación</th>
+                                        <th>Acción</th>        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- DATOS FACTURA -->
+                <div class="mb-2 border-bottom-primary">
+                    <div>
+                        <div class="table-responsive">
+                            <table id="tblFactura" class="table-bordered" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th colspan="8">DATOS DE LA FACTURA</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Nro Factura</th>
+                                        <th>Fecha Creacion</th>
+                                        <th>Fecha Vencimiento</th>
+                                        <th>Total</th>
+                                        <th>Saldo</th>
+                                        <th>Demora</th>
+                                        <th>Estado</th>
+                                        <th>Acción</th>        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- DATOS PAGOS -->
+                <div class="mt-2 border-bottom-primary">
+        <div>
+            <div class="table-responsive border-bottom-primary">
+                <table id="tblPagos" class="table-bordered" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th colspan="9">MOVIMIENTOS DE COBRANZA</th>
+                        </tr>
+                        <tr>
+                            <th>Fecha Cobranza</th>
+                            <th>Cobrador</th>
+                            <th>Nro Factura</th>
+                            <th>Monto</th>
+                            <th>Forma de Pago</th>
+                            <th>Banco</th>
+                            <th>N° Operación</th>
+                            <th>Observación</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+                <!-- FIN Container -->
+            </div>
+
+        </div>
+        <div layout:fragment="scripts">
+            <script type="text/javascript" th:src="@{/js/nsScript/detalleCliente/index.js}"></script>
+            <script type="text/javascript" th:src="@{/js/nsScript/detalleCliente/controller.js}"></script>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,137 @@
+.tooltipcabecera {
+    display: inline;
+    position: relative;
+    z-index: 999;
+}
+
+/* Tooltip */
+
+.tooltipcabecera-content {
+    position: absolute;
+    z-index: 9999;
+    width: 80px;
+    padding-top: 5px;
+    left: -90%;
+    margin-left: -80%;
+    bottom: 100%;
+    /* border-radius: 50%; */
+    text-align: center;
+    background: #fff;
+    color: #003353;
+    opacity: 0;
+    /* margin-bottom: 20px; */
+    /* cursor: default; */
+    pointer-events: none;
+}
+
+.tooltipcabecera-content i {
+    opacity: 0;
+}
+
+.tooltipcabecera:hover .tooltipcabecera-content,
+.tooltipcabecera:hover .tooltipcabecera-content i {
+    opacity: 1;
+}
+
+.tooltipcabecera-effect-1 .tooltipcabecera-content {
+    -webkit-transform: translate3d(0,10px,0) rotate3d(1,1,1,45deg);
+    transform: translate3d(0,10px,0) rotate3d(1,1,1,45deg);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltipcabecera-effect-1 .tooltipcabecera-content i {
+    -webkit-transform: scale3d(0,0,1);
+    transform: scale3d(0,0,1);
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltipcabecera-effect-2 .tooltipcabecera-content {
+    -webkit-transform: translate3d(0,10px,0);
+    transform: translate3d(0,10px,0);
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltipcabecera-effect-2 .tooltipcabecera-content i {
+    -webkit-transform: translate3d(0,15px,0);
+    transform: translate3d(0,15px,0);
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltipcabecera-effect-3 .tooltipcabecera-content {
+    -webkit-transform: translate3d(0,10px,0) rotate3d(0,1,0,90deg);
+    transform: translate3d(0,10px,0) rotate3d(0,1,0,90deg);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltipcabecera-effect-3 .tooltipcabecera-content i {
+    -webkit-transform: scale3d(0,0,1);
+    transform: scale3d(0,0,1);
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltipcabecera-effect-4 .tooltipcabecera-content {
+    -webkit-transform: translate3d(0,-20px,0);
+    transform: translate3d(0,-20px,0);
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltipcabecera-effect-4 .tooltipcabecera-content i {
+    -webkit-transform: translate3d(0,20px,0);
+    transform: translate3d(0,20px,0);
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltipcabecera-effect-5 .tooltipcabecera-content {
+    -webkit-transform: scale3d(0,0,1);
+    transform: scale3d(0,0,1);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltipcabecera-effect-5 .tooltipcabecera-content i {
+    -webkit-transform: translate3d(0,20px,0);
+    transform: translate3d(0,20px,0);
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltipcabecera:hover .tooltipcabecera-content,
+.tooltipcabecera:hover .tooltipcabecera-content i {
+    pointer-events: auto;
+    -webkit-transform: translate3d(0,0,0) scale3d(1,1,1);
+    transform: translate3d(0,0,0) scale3d(1,1,1);
+}
+
+.tooltipcabecera-effect-1:hover .tooltipcabecera-content i {
+    -webkit-transform: rotate3d(1,1,1,0);
+    transform: rotate3d(1,1,1,0);
+}
+
+/* Arrow */
+
+.tooltipcabecera-content::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin: -7px 0 0 -15px;
+    width: 30px;
+    height: 20px;
+    background: url(../img/tooltipcabecera1.svg) no-repeat center center;
+    background-size: 100%;
+
+}

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta Content-Type="text/html; charset=UTF-8'">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="_csrf" content="077ed170-fac4-45cf-8ad5-2d2bb3d30663"/>
+        <meta name="_csrf_header" content="X-CSRF-TOKEN"/>
+        <meta name="description" content="sistema de gestion de inversiones fap">
+        <meta name="author" content="fuerza aérea del perú">
+
+        <link href="./resources/css/admin/all.min.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        <!-- Custom styles for this template-->
+        <link href="./resources/css/admin/sb-admin-2.css" rel="stylesheet" />
+        <link href="./resources/css/datatable/dataTables.bootstrap.css" rel="stylesheet" />
+        <link href="./resources/css/jquery-ui.css" rel="stylesheet" /> 
+        <link href="./resources/css/loading/loading.css" rel="stylesheet" />    
+        <link href="./resources/css/form-steps/form-steps.css" rel="stylesheet" />    
+        <link href="./resources/css/checkRadio.css" rel="stylesheet" />   
+        <link href="./resources/css/dashboard.css" rel="stylesheet" />   
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css">
+
+        <link rel="icon" type="image/png" href="./resources/images/escudo.png" />
+        
+
+        <title>SISTEMA DE GESTIÓN DE COBRANZA</title>
+
+    </head>
+    <div class="modal-preload d-none" style="">
+        <div class="circles">
+            <div class="circle"></div>
+            <div class="mainLogo"><i class="preloadEc"></i> Procesando... </div>
+        </div>
+    </div>
+
+    <body id="page-top">
+
+        <!-- Page Wrapper -->
+        <div id="wrapper">
+
+            <!-- Sidebar -->
+            <ul name="slider" class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled">
+                 
+                
+            </ul>
+
+            <!-- End of Sidebar -->
+
+            <!-- Content Wrapper -->
+            <div id="content-wrapper" class="d-flex flex-column">
+
+                <!-- Main Content -->
+                <div id="content">
+
+                    <!-- Topbar -->
+                    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                        <!-- Sidebar Toggle (Topbar) -->
+                        <button id="sidebarToggleTop" class="btn d-md-none rounded-circle mr-3 text-white">
+                            <i class="fa fa-bars"></i>
+                        </button>
+
+
+                        <!-- Topbar Navbar -->
+                        <ul class="navbar-nav ml-auto">
+
+                            <li class="nav-item no-arrow">
+                                <a class="nav-link " href="#" >
+                                    <strong class="mr-2 d-lg-inline">SISTEMA DE GESTIÓN DE COBRANZAS</strong>
+                                </a>
+                            </li>
+                             
+                            <div class="topbar-divider d-none d-sm-block"></div>
+                            <!-- Nav Item - User Information -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-user mr-1"> </i> <strong class="mr-2 d-none d-lg-inline" id="datosUsuario">JONATHAN</strong>
+                                    <input type="hidden" name="hdnidperfil" value="1">
+                                </a>
+                                <!-- Dropdown - User Information -->
+                                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                    <a class="dropdown-item">
+                                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        JONATHAN - ADMINISTRADOR
+                                    </a>
+                                    <a class="dropdown-item" href="/appSIGIN/ideasInversion">
+                                        <i class="fas fa-home fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Inicio
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+
+                                    <a class="dropdown-item" target="_blank" onclick="window.open(this.href, this.target, 'width=700,height=400'); return false;" href="/appSIGIN/admin/actualizarContraseña">
+                                        <i class="fas fa-key fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Cambiar Contraseña                                                                             
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="/appSIGIN/logout">
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Salir
+                                    </a>
+                                </div>
+                            </li>
+                            <!-- End isUserloged() -->
+                        </ul>
+
+                    </nav>
+                    <!-- End of Topbar -->
+
+                    <div id="divAlerta" class="fixed-top"></div>
+
+
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-12 text-center text-uppercase h4">DETALLES DEL CLIENTE</div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="table-responsive">
+                <table class="table-bordered" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>DATOS GENERALES</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="mb-3">
+                <p>Cobrador: COB-00051 Rogger Adrianzen Manrique<br>
+                RUC: 10469952776<br>
+                Razon Social: Sistemas Adrianzen EIRL<br>
+                Cliente: Jonathan Adrianzen<br>
+                Departamento: Lima<br>
+                Provincia: Lima<br>
+                Distrito: S.M.P. <br>
+                Dirección: Jr. Lagarde 557 block 7 - 303</p>
+            </div>       
+        </div>
+        <div class="col-md-6">
+            <div class="table-responsive">
+                <table class="table-bordered" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>DATOS FACTURA</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="mb-3">
+                <p>
+                    <h4> Nro Factura: EC-1002 <br></h4> 
+                    Fecha de Emision: 30/09/2023 <br>
+                    Dias de vencimiento: 30 días <br>
+                    Fecha de Vencimiento: 30/10/2023 <br>
+                    Moneda: Soles <br>
+                    Monto: 15,000.00 <br>
+                    <b>Saldo: 5,000.00</b> 
+                </p>
+                <hr>
+                <P>
+                     <span class="btn btn-info" data-target="#mdlPago" data-toggle="modal"><i class="far fa-money-bill-alt fa-fw"></i> Agregar Pago</span>
+                     <span class="btn btn-danger" data-target="#mdlObservacion" data-toggle="modal"><i class="fas fa-exclamation fa-fw"></i> Observación</span>
+                </P>
+
+            </div>
+        </div>
+    </div>
+     
+    
+    
+    <!-- Bandeja Principal -->
+    
+    <div class="mb-3 row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table id="tblFactura" class="table-bordered" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th colspan="10">MOVIMIENTOS DE COBRANZA</th>
+                        </tr>
+                        <tr>
+                            <th>Fecha Cobranza</th>
+                            <th>Nro Factura</th>
+                            <th>Cobrador</th>
+                            <th>Pago</th>
+                            <th>Forma de Pago</th>
+                            <th>N° Operación</th>
+                            <th>Fecha Operacion</th>
+                            <th>Banco Origen</th>
+                            <th>Observacion</th>
+                            <th>Motivo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>12/05/2023 11:33</td>
+                            <td>EC-1002</td>
+                            <td>COB-00051</td>
+                            <td>10,000.00</td>
+                            <td>Depósito</td>
+                            <td>33565987</td>
+                            <td>12/05/2023 00:00</td>
+                            <td>BCP</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>11/05/2023 15:40</td>
+                            <td>EC-1001</td>
+                            <td>COB-00051</td>
+                            <td>11,500.00</td>
+                            <td>Efectivo</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10/05/2023 13:50</td>
+                            <td>EC-1001</td>
+                            <td>COB-00051</td>
+                            <td>0.00</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Cliente se encuentra ocupado</td>
+                            <td>Cliente no quiere pagar</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="mb-3">
+        
+    </div>
+
+
+    <!-- FIN Container -->
+</div>
+<style>
+    .form-group{
+        margin-bottom: 0px !important;
+    }
+</style>
+
+<!-- Modal Agregar Pago-->
+<div class="modal fade" id="mdlPago" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-gradient-primary">
+        <h5 class="modal-title" id="exampleModalLabel">Agregar Pago</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Pago:</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Forma de Pago:</label>
+            <select class="form-control">
+                <option value="0">Efectivo</option>
+                <option value="1">Deposito</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="col-form-label">Banco:</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label class="col-form-label">N° Operación:</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label class="col-form-label">Fecha Operación:</label>
+            <input type="text" class="form-control" placeholder="dd/mm/yyyy hh:mm">
+          </div>
+      </div>
+      <div class="modal-footer">
+        <input type="button" class="btn btn-secondary" data-dismiss="modal" value="Cerrar" />
+        <input type="button" class="btn btn-primary" value="Guardar">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Agregar Observación-->
+<div class="modal fade" id="mdlObservacion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-gradient-danger">
+        <h5 class="modal-title" id="exampleModalLabel">Agregar Observación</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="form-group">
+            <label class="col-form-label">Motivo:</label>
+            <select class="form-control">
+                <option value="0">Negocio Cerrado</option>
+                <option value="1">Cliente no quiere pagar</option>
+                <option value="1">Factura observada</option>
+                <option value="">Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="col-form-label">Observación:</label>
+            <textarea cols="30" rows="10" class="form-control"></textarea>
+          </div>
+          
+      </div>
+      <div class="modal-footer">
+        <input type="button" class="btn btn-secondary" data-dismiss="modal" value="Cerrar" />
+        <input type="button" class="btn btn-primary" value="Guardar">
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+      <!-- End of conent -->
+
+   <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="copyright text-center" style="font-size:10px;">
+          <span>Copyright 2023 - Derechos Reservados</span><br>
+          <span>v0.1</span>
+      </div>
+    </div>
+  </footer>
+      <!-- End of Footer -->
+  </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+  
+    <script src="./resources/js/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="./resources/js/jquery/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="./resources/js/jquery/securityAjax.js" type="text/javascript"></script>
+    <script src="./resources/js/bootstrap/bootstrap.bundle.js" type="text/javascript"></script>
+    <script src="./resources/js/bootstrap/bootstrap-dialog.js" type="text/javascript"></script>
+    <script src="./resources/js/jquery/jquery.easing.min.js" type="text/javascript"></script>
+    <script src="./resources/js/datatable/datatable.min.js" type="text/javascript"></script>
+    <script src="./resources/js/datatable/datatable.pageinfo.js" type="text/javascript"></script>
+    <script src="./resources/js/datatable/dataTable.bootstrap.min.js" type="text/javascript"></script>
+    <script src="./resources/js/nsScript/ns.js" type="text/javascript"></script>
+    <script src="./resources/js/admin/sb-admin-2.js" type="text/javascript"></script>
+    <script src="./resources/js/chartjs/Chart.min.js" type="text/javascript"></script>
+    <script src="./resources/js/chartjs/utils.js" type="text/javascript"></script>
+    <script src="./resources/js/jquery/jquery.number.js" type="text/javascript"></script>
+    <script src="./resources/js/nsScript/layout.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./resources/js/nsScript/permisos.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
+    <script type="text/javascript">
+        $('[data-toggle="tooltip"]').tooltip();
+         $('[data-toggle="popover"]').popover('show');
+         
+     ns('Web.SIGPI.MensajeSistema')
+     Web.SIGPI.MensajeSistema.Confirmacion = "Está seguro de guardar los datos?";
+     Web.SIGPI.MensajeSistema.TituloMensajeConfirmacion = "Mensaje de Confirmación";
+     Web.SIGPI.MensajeSistema.MensajeConfirmacionCambiarEstado = "Está seguro de eliminar el registro?";
+     Web.SIGPI.MensajeSistema.MensajeConfirmacionAdjuntar = "Está seguro de adjuntar el archivo?";
+     </script>
+
+
+<!-- Optional JavaScript -->
+
+
+
+</body>
+</html>

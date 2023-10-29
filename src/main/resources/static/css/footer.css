@@ -1,0 +1,28 @@
+html{
+    position: relative;
+}
+body{
+    margin-bottom: 72px;
+    height: auto;
+}
+.footer{
+    background-color: #003353 !important;
+    color: white;
+    width: 100%;
+    position: fixed;
+    padding-left: 15px;
+    padding-right: 15px;
+    bottom: 0;
+    z-index: 9;
+}
+.footer p{
+    margin: 10px 0px;
+}
+@media (max-width: 768px) {
+ .footer {
+    display: none;
+    }
+    body{
+    margin-bottom: 0;
+    }
+}
